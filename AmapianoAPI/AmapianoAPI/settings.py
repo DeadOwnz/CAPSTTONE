@@ -78,7 +78,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'amapianolib',  # This should match the name specified in your Azure PostgreSQL setup
-        'USER': 'amapianolib',  # This should match the administratorLogin specified in your Azure PostgreSQL setup
+        'USER': 'amapianolib@amapianolib-postgres-server',  # This should match the administratorLogin specified in your Azure PostgreSQL setup
         'PASSWORD': 'bacardiBacard1',  # This should match the administratorLoginPassword specified in your Azure PostgreSQL setup
         'HOST': 'amapianolib-postgres-server.postgres.database.azure.com',  # This should match the server name specified in your Azure PostgreSQL setup
         'PORT': '5432',
