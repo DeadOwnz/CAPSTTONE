@@ -83,7 +83,7 @@ DATABASES = {
         'PASSWORD': 'bacardiBacard1',  # This should match the administratorLoginPassword specified in your Azure PostgreSQL setup
         'OPTIONS': {
             'sslmode': 'require',
-        }
+        },
     }
 }
  
@@ -138,3 +138,8 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
     ],
 }
+
+CSRF_TRUSTED_ORIGINS = ['https://AmapianoAPI']
+ALLOWED_HOSTS = 'localhost, 127.0.0.1, [::1], AmapianoAPI'
+SECURE_SSL_REDIRECT = 0
+DEBUG = 1
