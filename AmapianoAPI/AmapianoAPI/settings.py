@@ -140,7 +140,7 @@ REST_FRAMEWORK = {
 }
 
 CSRF_TRUSTED_ORIGINS = ['https://AmapianoAPI']
-ALLOWED_HOSTS = ['localhost, 127.0.0.1, [::1], AmapianoAPI']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]', 'AmapianoAPI']
 SECURE_SSL_REDIRECT = 0
 DEBUG = 1
 
