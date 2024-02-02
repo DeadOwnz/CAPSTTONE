@@ -1,5 +1,4 @@
 # In musicapi/models.py
-
 from django.db import models
 
 class Artist(models.Model):
@@ -8,7 +7,7 @@ class Artist(models.Model):
     platform = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.artist_name
+        return self.name
 
     class Meta:
         app_label = 'musicapi'

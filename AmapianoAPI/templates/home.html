@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmapianoAPI</title>
+</head>
+<body>
+    <h1>Welcome to the AmapianoAPI!</h1>
+    <h2>Artists</h2>
+    <ul>
+        {% for artist in artists %}
+            <li>{{ artist.name }} - <a href="{% url 'artist-detail' artist.pk %}">Details</a></li>
+        {% endfor %}
+    </ul>
+    <h2>Genres</h2>
+    <ul>
+        {% for genre in genres %}
+            <li>{{ genre.name }} - <a href="{% url 'genre-detail' genre.pk %}">Details</a></li>
+        {% endfor %}
+    </ul>
+    <h2>Platforms</h2>
+    <ul>
+        {% for platform in platforms %}
+            <li>{{ platform.name }} - <a href="{% url 'platform-detail' platform.pk %}">Details</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
