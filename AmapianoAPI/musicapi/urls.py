@@ -1,11 +1,11 @@
 # musicapi/urls.py
-from django.urls import path, re_path, include
+# musicapi/urls.py
+from django.urls import path, include
 from .views import ArtistList, GenreList, PlatformList, home
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
-#added this to configure /swagger endpoint
 schema_view = get_schema_view(
     openapi.Info(
         title="AmapianoAPI",
@@ -19,13 +19,10 @@ schema_view = get_schema_view(
     permission_classes=(permissions.AllowAny,),
 )
 
-
 urlpatterns = [
     path('artists/', ArtistList.as_view(), name='artist-list'),
     path('genres/', GenreList.as_view(), name='genre-list'),
     path('platforms/', PlatformList.as_view(), name='platform-list'),
     path('', home, name='home'),
-    re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
-    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'), #added recently]
-
+    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]
